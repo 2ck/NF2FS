@@ -20,9 +20,9 @@ Finally, the design and evaluation details are in the paper <font style="backgro
 git clone https://github.com/HNFFS/NF2FS.git
 ~~~
 
-**2. Download Keil [uVision5](https://www.keil.com/demo/eval/c51.htm) **
-
-![Keil](.\image\Keil.jpg)
+**2. Download Keil**
+Keil uVision5 is available in https://www.keil.com/demo/eval/c51.htm.
+<img src=".\image\Keil.jpg" alt="Keil" />
 
 **3. Open the board environment**
 
@@ -32,7 +32,8 @@ git clone https://github.com/HNFFS/NF2FS.git
 
 First, click the button <font style="background: lightgrey">Options for Target</font>.
 
-![Options button](.\image\Options button.png)
+<img src=".\image\Options-button.png" alt="Options-button" />
+
 
 Then, in <font style="background: lightgrey">Device</font>, choose STM32H750XBHx as the target development board.
 
@@ -54,7 +55,7 @@ Finally, Click the button <font style="background: lightgrey">OK</font> to save 
 
 Click the button <font style="background: lightgrey">Rebuild</font> to build the binary.
 
-![Rebuild](.\image\Rebuild.png)
+<img src=".\image\Rebuild.png" alt="Rebuild" />
 
 **6. Link development board to PC**
 
@@ -68,7 +69,7 @@ TODO
 
 Finally, click the button <font style="background: lightgrey">Download</font>, and NF2FS will run on the development board automatically!
 
-![Download](.\image\Download.png)
+<img src=".\image\Download.png" alt="Download" />
 
 ## Emulated Environment Setup
 
