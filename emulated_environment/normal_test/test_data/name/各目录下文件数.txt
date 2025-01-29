@@ -1,0 +1,15 @@
+old
+1  : 1:/busybox
+93 : 1:/busybox/bin
+72 : 1:/busybox/sbin
+0  : 1:/busybox/usr
+177: 1:/busybox/usr/bin
+60 : 1:/busybox/usr/sbin
+
+New
+1  : 1:/busybox
+93 : 1:/busybox/bin
+72 : 1:/busybox/sbin
+0  : 1:/busybox/usr
+175: 1:/busybox/usr/bin
+59 : 1:/busybox/usr/sbin

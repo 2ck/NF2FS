@@ -1,0 +1,12 @@
+1:/busybox
+y
+1:/busybox/bin
+y
+1:/busybox/sbin
+y
+1:/busybox/usr
+n
+1:/busybox/usr/bin
+y
+1:/busybox/usr/sbin
+y
