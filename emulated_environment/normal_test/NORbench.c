@@ -302,6 +302,8 @@ void layer_test(struct nfvfs *dst_fs, char *path, int loop)
 // test file operations with dir layers
 void dir_operations_test(const char *fsname, int dir_layer, int loop)
 {
+  W25QXX_init();
+  
   struct nfvfs *dst_fs;
 
   printf("\r\n\r\n\r\n-----------------dir test begin-----------------\r\n");
