@@ -45,11 +45,11 @@ In ***Target***, set ***Read/Only*** and ***Read/Write Memory Areas*** to store 
 
 <img src=".\image\Target.png" alt="Target" style="zoom:50%;" />
 
-In C/C++, choose ***O0 optimization***, ***One ELF Section per Function***, ***C99 Mode***.
+In ***C/C++***, choose ***O0 optimization***, ***One ELF Section per Function***, ***C99 Mode***.
 
 <img src=".\image\C-C++.png" alt="C-C++" style="zoom:50%;" />
 
-In Linker, click the button ***Use Memory Layout from Target Dialog***.
+In ***Linker***, click the button ***Use Memory Layout from Target Dialog***.
 
 <img src=".\image\Linker.png" alt="Linker" style="zoom:50%;" />
 
