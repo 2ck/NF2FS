@@ -17,7 +17,7 @@ Finally, the design and evaluation details are in the paper ***/doc/NF2FS.pdf***
 **1. Clone NF2FS from Github:**
 
 ~~~shell
-git clone https://github.com/HNFFS/NF2FS.git
+git clone https://github.com/HIT-HSSL/NF2FS.git
 ~~~
 
 **2. Download Keil**
@@ -82,8 +82,8 @@ Finally, click the button ***Download***, and NF2FS will run on the development 
 **1. Clone NF2FS from Github:**
 
 ~~~shell
-git clone https://github.com/HNFFS/NF2FS.git
-cd ./emulated_environment
+git clone https://github.com/HIT-HSSL/NF2FS.git
+cd ./NF2FS/emulated_environment
 ~~~
 
 **2. Run NF2FS in emulated environment**
