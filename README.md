@@ -79,16 +79,38 @@ Finally, click the button ***Download***, and NF2FS will run on the development 
 
 ## Emulated Environment Setup
 
+To ensure the reproducibility of our experiments, we provide a simple docker environment to run NF2FS on PC. The user can run basic I/O test in the non-docker/docker environment.
+
 **1. Clone NF2FS from Github:**
 
 ~~~shell
 git clone https://github.com/HIT-HSSL/NF2FS.git
-cd ./NF2FS/emulated_environment
 ~~~
 
-**2. Run NF2FS in emulated environment**
+**2. Run NF2FS in the emulated environment**
+
+**2.1 Run NF2FS in the docker environment**
+
+First, build the docker image.
+~~~shell
+docker build . -t nf2fs-artifact
+~~~
+
+Then, run the docker container.
+~~~shell
+docker run --rm -it nf2fs-artifact
+~~~
+
+Inside docker, the code is located in /emulated_environment/normal_test, simply run the following command to test NF2FS.
+~~~shell
+cd /emulated_environment/normal_test
+make test
+~~~
+
+**2.2 Run NF2FS in the non-docker environment**
 
 ~~~shell
+cd ./NF2FS/emulated_environment
 cd ./normal_test
 make test
 ~~~
