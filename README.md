@@ -65,11 +65,11 @@ Click the button ***Rebuild*** to build the binary.
 
 **6. Link development board to PC**
 
-We choose ***Positive Atomic STM32H750 Polaris*** as the target development board, which uses ***ST-Link*** to download binary. Moreover, we use ***XCOM*** to receive message from board to PC.
+We choose ***Positive Atomic STM32H750 Polaris*** as the target development board, which uses ***ST-Link*** (① in figure) to download binary. Moreover, we use ***XCOM*** (② in figure) to receive message from board to PC. Note that ST-Link is a hardware, while XCOM is a software, and they both use USB interface to link with PC.
 
-The link details will be updated soon.
+<img src=".\image\Board.png" alt="Board" />
 
-TODO
+<img src=".\image\XCOM.png" alt="XCOM" />
 
 **7. Download binary to development board**
 
