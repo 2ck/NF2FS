@@ -542,6 +542,8 @@ typedef struct NF2FS_config
     // but must be <= NF2FS_FILE_MAX. Defaults to NF2FS_FILE_MAX when zero. Stored
     // in superblock and must be respected by other NF2FS drivers.
     NF2FS_size_t file_max;
+
+    void* user_data;
 } NF2FS_config_t;
 
 /**
