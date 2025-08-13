@@ -182,7 +182,7 @@ int NF2FS_map_init(NF2FS_t *NF2FS, NF2FS_map_ram_t **map_addr, NF2FS_size_t buff
     int err = NF2FS_ERR_OK;
 
     // Allocate memory for map.
-    NF2FS_map_ram_t *map = NF2FS_malloc(sizeof(NF2FS_map_ram_t) + buffer_len);
+    NF2FS_map_ram_t *map = NF2FS_malloc(sizeof(NF2FS_map_ram_t) + buffer_len * sizeof(uint32_t));
     if (!map)
     {
         err = NF2FS_ERR_NOMEM;
@@ -1544,7 +1544,7 @@ int NF2FS_manager_init(NF2FS_t* NF2FS, NF2FS_flash_manage_ram_t** manager_addr)
     manager->wl= NULL;
 
     // init etimes
-    num= NF2FS_alignup(NF2FS->cfg->sector_count / 8, NF2FS->cfg->sector_size) /
+    num= NF2FS_alignup(2 * NF2FS->cfg->sector_count / 8, NF2FS->cfg->sector_size) /
                      NF2FS->cfg->sector_size;
     manager->etimes= NF2FS_malloc(num * sizeof(NF2FS_size_t));
     if (!manager->etimes) {

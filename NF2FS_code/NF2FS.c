@@ -264,6 +264,7 @@ int NF2FS_format(NF2FS_t *NF2FS, const struct NF2FS_config *cfg, bool init_flag)
     NF2FS->dir_list->pos_sector= NF2FS_NULL;
     NF2FS->dir_list->tail_sector= NF2FS->ram_tree->tree_array[0].tail_sector;
     NF2FS->dir_list->tail_off= sizeof(NF2FS_dir_sector_flash_t);
+    NF2FS->dir_list->next_dir = NULL;
 
     // init the id map
     NF2FS->id_map->begin= 3;
