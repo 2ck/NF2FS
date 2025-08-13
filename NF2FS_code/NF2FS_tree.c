@@ -115,7 +115,7 @@ int NF2FS_tree_entry_add(NF2FS_tree_ram_t* tree, NF2FS_size_t father_id, NF2FS_s
 }
 
 // judge if the tree entry is valid
-bool inline NF2FS_tree_entry_isvalid(NF2FS_tree_ram_t* tree, NF2FS_size_t tree_index, NF2FS_size_t father_id)
+static bool inline NF2FS_tree_entry_isvalid(NF2FS_tree_ram_t* tree, NF2FS_size_t tree_index, NF2FS_size_t father_id)
 {
     return (tree->tree_array[tree_index].id != NF2FS_NULL &&
             tree->tree_array[tree_index].father_id == father_id);
