@@ -65,13 +65,15 @@ static inline uint32_t NF2FS_alignup(uint32_t a, uint32_t alignment)
     return NF2FS_aligndown(a + alignment - 1, alignment);
 }
 
+#include "../../util/malloc_tracker.h"
+
 // Allocate memory, only used if buffers are not provided to NF2FS
 static inline void* NF2FS_malloc(size_t size)
 {
 #ifndef NF2FS_NO_MALLOC
     // TODO, Need to change to the malloc function that used in your system
     // return pvPortMalloc(size);
-    return malloc(size);
+    return mt_malloc(size);
 #else
     (void)size;
     return NULL;
@@ -84,7 +86,7 @@ static inline void NF2FS_free(void* p)
 #ifndef NF2FS_NO_MALLOC
     // TODO, Need to add when all things is ready
     // vPortFree(p);
-    return free(p);
+    return mt_free(p);
 #else
     (void)p;
 #endif
