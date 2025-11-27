@@ -617,6 +617,11 @@ int NF2FS_file_close(NF2FS_t* NF2FS, NF2FS_file_ram_t* file)
 // read data of a file
 int NF2FS_file_read(NF2FS_t* NF2FS, NF2FS_file_ram_t* file, void* buffer, NF2FS_size_t size)
 {
+	if (file->file_size < 0) {
+		printf("%s file size < 0: %d\n", __FUNCTION__, file->file_size);
+		return NF2FS_ERR_CORRUPT;
+	}
+
     // error if read size is larger than file size
     if (file->file_pos + size > file->file_size) {
         NF2FS_ERROR("file message wrong before reading\r\n");

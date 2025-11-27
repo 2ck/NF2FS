@@ -951,6 +951,9 @@ int NF2FS_idmap_init(NF2FS_t* NF2FS, NF2FS_idmap_ram_t** map_addr)
         goto cleanup;
     }
 
+    memset(idmap, 0, sizeof(NF2FS_idmap_ram_t));
+    idmap->ids_in_buffer = NF2FS_ID_MAX / NF2FS->cfg->region_cnt;
+
     // Allocate free id map.
     err = NF2FS_map_init(NF2FS, &idmap->free_map, idmap->ids_in_buffer / 8);
     if (err) {
